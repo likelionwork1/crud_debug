@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'homes#index'
   get 'homes/index'
-  get 'homes/create'
   get 'homes/show/:id' => 'homes#show'
   get 'homes/edit/:id'
   get 'homes/update/:id'
