@@ -5,10 +5,10 @@ class HomesController < ApplicationController
 
   def create
     post = Post.new
-    post.title = params[:title]
-    post.content = params[:content]
-    post.writer = params[:writer]
-    post.password = params[:password]
+    post.f_title = params[:title]
+    post.f_content = params[:content]
+    post.f_writer = params[:writer]
+    post.f_password = params[:password]
     post.save
     
     redirect_to '/homes/index'
