@@ -1,0 +1,10 @@
+<h1>Homes#edit</h1>
+<p>Find me in app/views/homes/edit.html.erb</p>
+
+<form action="/homes/update/<%= @post.id %>" method="get">
+    수정 제목: <input type="text" name="f_title" value=<%= @post.title %>> <br>
+    수정 내용: <input type="text" name="f_content" value=<%= @post.content %>> <br>
+    수정 작성자: <input type="text" name="f_writer" value=<%= @post.writer %>> <br>
+    수정 비밀번호: <input type="password" name="f_password" value=<%= @post.password %>> <br>
+    <input type="submit" value="수정내용 저장">
+</form>

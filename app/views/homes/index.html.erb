@@ -1,0 +1,27 @@
+<h1>Homes#index</h1>
+<p>Find me in app/views/homes/index.html.erb</p>
+
+<form action="/homes/create" method="get">
+    제목: <input type="text" name="f_title"> <br>
+    내용: <input type="text" name="f_content"> <br>
+    작성자: <input type="text" name="f_writer"> <br>
+    비밀번호: <input type="password" name="f_password"> <br>
+    <input type="submit" value="게시글저장">
+</form>
+
+<hr>
+
+<% @posts.each do |x| %>
+    <%= x.title %>
+    <a href="/homes/show/<%=x.id%>"> [내용보기] </a>
+    <a href="/homes/edit/<%=x.id%>"> [수정하기] </a>
+    <a href="/homes/delete/<%=x.id%>"> [삭제하기] </a>
+    <br>
+<% end %>
+
+<hr>
+
+<form action="/homes/delete_if" method="get">
+    제목이: <input type="text" name="title"> 인 글 삭제하기<br>
+    <input type="submit" value="삭제">
+</form>
